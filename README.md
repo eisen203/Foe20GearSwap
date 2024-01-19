@@ -1,1 +1,2 @@
-Need Gearinfo addon and certain codes in your globals or you have to put them in yourself to each lua.
+Need Gearinfo addon from https://github.com/sebyg666/GearInfo for any of these to work.
+Certain codes needed for gearinfo are in the global files, I would atleast look at them... 
