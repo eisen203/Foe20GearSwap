@@ -940,23 +940,3 @@ function set_lockstyle()
 	send_command('wait 8; input /lockstyleset 56')
 end
 
-windower.raw_register_event('incoming chunk', function(id,original,modified,injected,blocked)
-    local self = windower.ffxi.get_player()
-	    if player.status ~= 'Engaged' then
-		wsnum = 0   
-
-		--------------------- Add Auto WS LIst not on or whatever
-	end
-    if id == 0x028 then
-        local packet = packets.parse('incoming', original)
-        local category = packet['Category']
-        if packet.Actor == self.id and category == 1 and state.AutoWS.value == 'true' then
-			
-			if state.AutoWSList.value == 'shun' and player.tp >= 1000 and wsnum == 0 then
-                    send_command('input /ws Blade: shun <t>')
-                    wsnum = 0
-			end
-
-				end
-			end
-		end)
